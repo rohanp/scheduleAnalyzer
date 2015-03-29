@@ -1,0 +1,58 @@
+
+h2{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+#rightContainer h4{
+    color: #1ABC9C;
+}
+
+#leftContainer h4{
+    color: #3498db;
+}
+
+.grid{
+    padding: 10px;
+}
+
+
+span{
+    padding 10px;
+}
+
+.small{
+    width:55px;
+}
+
+.medium{
+    width:65px;
+}
+
+button{
+   
+}
+
+#rightContainer{
+    height: auto;
+    width: 500px;
+    float: right;
+}
+
+#leftContainer{
+    height: auto;
+    width: 500px;
+    float: left;
+}
+
+#leftHalf{
+    position:absolute;
+    display: inherit;
+    background-color: #1ABC9C;
+    height: auto;
+    width: 500px;
+    float: left;
+}

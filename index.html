@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/flat-ui/flat-ui.css" rel="stylesheet">
+		<link href="css/pure.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title> Schedule </title>
+	</head>
+
+	<body>
+        <div id="leftHalf"> </div>
+        <h2> Schedule Analyzer </h2>
+        
+        <div id="leftContainer">
+            <div class="pure-g">
+                <div class="pure-u-1-5"></div>
+                <div class="pure-u-4-5">
+                    <h4> Get Advice </h4>
+                </div>
+            </div>
+            
+            <div id="classesContainer">
+                <div class="pure-g">
+                    <div class="grid pure-u-1-5"> </div>
+                     <div class="grid pure-u-2-5">
+                        <h6> Class </h6>
+                        <input type="text" placeholder="eg. Multivar" class="form-control blue" />
+                    </div>
+                    <div class="grid pure-u-2-5">
+                        <h6> Teacher </h6>
+                         <input type="text" placeholder="eg. Osborne" class="form-control blue" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pure-g">
+                <div class="grid pure-u-1-5"></div>
+                <div  class="grid pure-u-4-5">
+                    <center>
+                        <button class="btn btn-blue btn-hg">
+                            Submit
+                        </button> 
+                    </center>                
+                </div>
+            </div>
+        </div>
+        
+        <div id="rightContainer">
+            <div class="pure-g">
+                <div class="pure-u-4-5">
+                    <h4> Give Advice </h4>
+                </div>
+                <div class="pure-u-1-5"></div>
+            </div>
+            <div class="pure-g">
+                <div class="grid pure-u-2-5">
+                    <h6> Class </h6>
+                    <input id="className" type="text" placeholder="eg. AP Physics" class="form-control" />
+                </div>
+                <div class="grid pure-u-2-5">
+                    <h6> Teacher </h6>
+                     <input id="teacher" type="text" placeholder="eg. Scholla" class="form-control" />
+                </div>
+                <div class="grid pure-u-1-5">
+
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="grid pure-u-4-5">
+                    <span>
+                        How many hours of work per week?
+                    </span>
+                    <div id="hourSlider">
+                    </div>
+                      <input id="hours" class="medium form-control" type="number" placeholder="4"  />
+                </div>
+                <div class="grid pure-u-1-5"></div>            
+            </div>
+
+             <div class="pure-g">
+                <div class="grid pure-u-4-5">
+                    <span>
+                        Class average? (estimate if you don't know)
+                    </span>
+                    <div id="difficultySlider">
+                    </div>
+                    <input id="difficulty" class="medium form-control" type="number" placeholder="88"  />
+                </div>
+
+                <div class="grid pure-u-1-5"></div>
+
+            </div>
+
+            <div class="pure-g">
+                <div  class="grid pure-u-4-5">
+                    <center>
+                        <button id="submitAdvice" class="btn btn-primary btn-hg">
+                            Submit
+                        </button> 
+                    </center>                
+                </div>
+                <div class="grid pure-u-1-5"></div>
+            </div>
+        </div>
+
+        
+        
+        <script src="js/jquery.min.js"> </script>
+        <script src="js/flat-ui.min.js"> </script>
+        <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+        <script src="js/setup.js"> </script>
+        <script src="js/script.js"> </script>
+
+	</body>
+
+</html>
