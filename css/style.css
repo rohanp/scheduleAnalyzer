@@ -1,4 +1,3 @@
-
 h2{
     text-align: center;
 }
@@ -55,4 +54,8 @@ button{
     height: auto;
     width: 500px;
     float: left;
+}
+
+#hours, #difficulty{
+    -webkit-transform: translate(0px,13px);
 }
