@@ -1,18 +1,15 @@
+var firebaseData = new Firebase("https://scheduleanalyzer.firebaseio.com/data");
+var data;
 
-//move this data to parse or something
-data = {
-	'AP Physics': {
-		'Scholla':{
-			'hours': 0.0,
-			'hoursVariance': 0.0,
-			'difficulty': 0.0,
-			'difficultyVariance':0.0,
-			'numEntries': 0.0
-		}
-	}
+firebaseData.once('value', function(snap) {
+    data = snap.val();
+});
 
-}
-//var firebaseData = new Firebase("https://scheduleanalyzer.firebaseio.com/");
+firebaseData.on("value", function(snapshot) {
+      data = snapshot.val();
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+});
 
 $('#submitAdvice').click( 
     function(){
@@ -30,13 +27,10 @@ $('#submitAdvice').click(
 
 
 function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
-    /*var data;
-    firebaseData.once('value', function(snap) {
-        data = snap.val();
-    });*/
-    
+    console.log(data)
+    console.log(c+t)
 	var num = data[c][t]['numEntries']
-    console.log(data[c][t]['hours']*num)
+    console.log(data[c][t]['hours'])
     console.log(data[c][t]['hours']*num + hours)
     console.log((data[c][t]['hours']*num + hours)/(num + 1))
     data[c][t]['hours'] = (data[c][t]['hours']*num + hours)/(num + 1)
@@ -48,8 +42,13 @@ function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
 
 	data[c][t]['numEntries'] += 1
     
-    //firebaseData.update(data);
+    firebaseData.update(data, function(){ 
+            console.log("success!");
+        }
+    );
 
 }
+
+
 
 
