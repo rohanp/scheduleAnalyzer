@@ -29,17 +29,18 @@ if ($slider.length > 0) {
     max: 12,
     value: 4,
     orientation: "horizontal",
-    range: "min"
+    range: "min",
+    slide: function(event, ui) {
+        $("#hours").val(ui.value);
+    }
   }).addSliderSegments($slider.slider("option").max);
 }
 
-$('#hourSlider').change(
-    function() {
-        console.log("here");
-        console.log( $('#hourSlider').val );
-        $('#hourInput').setInputValue( $('#hourSlider').val );
-    }
-);
+$("#hours").change(function () {
+    var value = this.value.substring(1);
+    console.log(value);
+    $("#hourSlider").slider("value", parseInt(value));
+});
 
 $('#hourInput').change(
     function() {
@@ -54,7 +55,10 @@ if ($slider.length > 0) {
     max: 100,
     value: 88,
     orientation: "horizontal",
-    range: "min"
+    range: "min",
+    slide: function(event, ui) {
+        $("#difficulty").val(ui.value);
+    }
   }).addSliderSegments($slider.slider("option").max);
 }
 

@@ -13,8 +13,8 @@ firebaseData.on("value", function(snapshot) {
 
 $('#submitAdvice').click( 
     function(){
-        className = $('#className').val();
-        teacher = $('#teacher').val();
+        className = $('#className').val().toLowerCase();
+        teacher = $('#teacher').val().toLowerCase;
         hours = parseFloat($('#hours').val());
         difficulty = parseFloat($('#difficulty').val());
         enter(className, teacher, hours, difficulty);
@@ -25,14 +25,10 @@ $('#submitAdvice').click(
     }
 );
 
-
 function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
     console.log(data)
     console.log(c+t)
 	var num = data[c][t]['numEntries']
-    console.log(data[c][t]['hours'])
-    console.log(data[c][t]['hours']*num + hours)
-    console.log((data[c][t]['hours']*num + hours)/(num + 1))
     data[c][t]['hours'] = (data[c][t]['hours']*num + hours)/(num + 1)
 	data[c][t]['difficulty'] = parseFloat((data[c][t]['difficulty']*num + difficulty)/(num + 1))  
     
