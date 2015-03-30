@@ -25,9 +25,10 @@ console.log("scriptjs loaded!");
 var $slider = $("#hourSlider");
 if ($slider.length > 0) {
   $slider.slider({
-    min: 1,
-    max: 12,
-    value: 4,
+    min: 0,
+    max: 6,
+    value: 1,
+    step: 0.5,
     orientation: "horizontal",
     range: "min",
     slide: function(event, ui) {
@@ -37,16 +38,9 @@ if ($slider.length > 0) {
 }
 
 $("#hours").change(function () {
-    var value = this.value.substring(1);
-    console.log(value);
+    var value = $('#hours').val()
     $("#hourSlider").slider("value", parseInt(value));
 });
-
-$('#hourInput').change(
-    function() {
-        $('#hourSliver').val = $('#hourInput').val
-    }
-);
 
 var $slider = $("#difficultySlider");
 if ($slider.length > 0) {
@@ -61,6 +55,11 @@ if ($slider.length > 0) {
     }
   }).addSliderSegments($slider.slider("option").max);
 }
+
+$("#difficulty").change(function () {
+    var value = $('#difficulty').val()
+    $("#difficultySlider").slider("value", parseInt(value));
+});
 
 for(var i=0; i<6; i++){
     $('#classesContainer').append("\

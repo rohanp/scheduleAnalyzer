@@ -14,12 +14,12 @@ firebaseData.on("value", function(snapshot) {
 $('#submitAdvice').click( 
     function(){
         className = $('#className').val().toLowerCase();
-        teacher = $('#teacher').val().toLowerCase;
+        teacher = $('#teacherName').val().toLowerCase();
         hours = parseFloat($('#hours').val());
         difficulty = parseFloat($('#difficulty').val());
         enter(className, teacher, hours, difficulty);
         $('#className').val('');
-        $('#teacher').val('');
+        $('#teacherName').val('');
         $('#hours').val('');
         $('#difficulty').val('');
     }
@@ -38,13 +38,17 @@ function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
 
 	data[c][t]['numEntries'] += 1
     
-    firebaseData.update(data, function(){ 
+    firebaseData.update(data, function(){
+            $('#rightContainer').append("<div class='pure-g'> <div class='pure-u-4-5'> <center> <span id='successText'> Thank you! Your response has been recorded </span> </center></div> <div class='pure-u-1-5'> </div> </div> ");
+            setTimeout(removeSuccess, 3000);
             console.log("success!");
         }
     );
-
 }
 
+function removeSuccess(){
+    $('#successText').fadeOut();
+}
 
 
 
