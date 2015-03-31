@@ -174,7 +174,11 @@ var classes = new Bloodhound({
 
 classes.initialize();
 
-
+$('.className').typeahead(null, {
+  name: 'classes',
+  displayKey: 'word',
+  source: classes.ttAdapter()
+});
 
 var teachers = new Bloodhound({
   datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.word); },
@@ -314,11 +318,6 @@ $('.teacherName').typeahead(null, {
   source: teachers.ttAdapter()
 });
 
-$('.className').typeahead(null, {
-  name: 'classes',
-  displayKey: 'word',
-  source: classes.ttAdapter()
-});
 
 
 $('.blueChildren').parent().children('span').addClass('blue');
