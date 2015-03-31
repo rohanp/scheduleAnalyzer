@@ -1,0 +1,14 @@
+{
+	"data" : {
+		"ap physics" : {
+			"scholla" : {"hours":0, "hoursVariance":0, "difficulty":0, "difficultyVariance":0, "numEntries":0},
+			"hannum": {"hours":0, "hoursVariance":0, "difficulty":0, "difficultyVariance":0, "numEntries":0},
+			"smith": {"hours":0, "hoursVariance":0, "difficulty":0, "difficultyVariance":0, "numEntries":0}
+		},
+
+		"ai 1" : {
+			"torbert": {"hours":0, "hoursVariance":0, "difficulty":0, "difficultyVariance":0, "numEntries":0},
+			"stueben": {"hours":0, "hoursVariance":0, "difficulty":0, "difficultyVariance":0, "numEntries":0}
+		}
+	}
+}
