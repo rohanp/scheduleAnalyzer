@@ -66,10 +66,10 @@ for(var i=0; i<6; i++){
             <div class='pure-g'>\
                 <div class='grid pure-u-1-5'> </div>\
                  <div class='grid pure-u-2-5'>\
-                    <input type='text' placeholder='' class='form-control blue'/>\
+                    <input type='text' placeholder='' class='className form-control blue'/>\
                 </div>\
                 <div class='grid pure-u-2-5'>\
-                     <input type='text' placeholder='' class='form-control blue'/>\
+                     <input type='text' placeholder='' class='teacherName form-control blue'/>\
                 </div>\
             </div>");
 }

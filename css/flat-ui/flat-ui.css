@@ -2395,6 +2395,16 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   border: 2px solid #1abc9c;
   border-radius: 6px;
   }
+
+.twitter-typeahead .tt-dropdown-menu.blue{
+  width: 100%;
+  padding: 5px 0;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 2px solid #3498DB;
+  border-radius: 6px;
+  }
+
 .twitter-typeahead .tt-suggestion p {
   padding: 6px 14px;
   margin: 0;
@@ -2410,6 +2420,12 @@ fieldset[disabled] .input-group-btn .btn-default.active {
   color: #fff;
   cursor: pointer;
   background-color: #16a085;
+  }
+.twitter-typeahead .tt-dropdown-menu.blue .tt-suggestion.tt-is-under-cursor,
+.twitter-typeahead .tt-dropdown-menu.blue .tt-suggestion.tt-cursor{
+  color: #fff;
+  cursor: pointer;
+  background-color: #217dbb;
   }
 .progress {
   height: 12px;
