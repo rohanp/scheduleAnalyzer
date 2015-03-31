@@ -181,553 +181,129 @@ var teachers = new Bloodhound({
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   limit: 4,
   local: [
-  {
-    "word": "Abdelhaq"
-  },
-  {
-    "word": "Acio"
-  },
-  {
-    "word": "Agyekum"
-  },
-  {
-    "word": "Aninakwah"
-  },
-  {
-    "word": "Appiah"
-  },
-  {
-    "word": "Applin"
-  },
-  {
-    "word": "Auerbach"
-  },
-  {
-    "word": "Averill"
-  },
-  {
-    "word": "Bailey"
-  },
-  {
-    "word": "Behling"
-  },
-  {
-    "word": "Bell"
-  },
-  {
-    "word": "Billington"
-  },
-  {
-    "word": "Bourjaily"
-  },
-  {
-    "word": "Brown"
-  },
-  {
-    "word": "Burch"
-  },
-  {
-    "word": "Burden"
-  },
-  {
-    "word": "Burdick-Zupancic"
-  },
-  {
-    "word": "Burke"
-  },
-  {
-    "word": "Burnett"
-  },
-  {
-    "word": "Campbell"
-  },
-  {
-    "word": "Carey"
-  },
-  {
-    "word": "Carpenter"
-  },
-  {
-    "word": "Castaldo"
-  },
-  {
-    "word": "Chavez"
-  },
-  {
-    "word": "Chhabra"
-  },
-  {
-    "word": "Cobb"
-  },
-  {
-    "word": "Coffey"
-  },
-  {
-    "word": "Conklin"
-  },
-  {
-    "word": "Cox"
-  },
-  {
-    "word": "Culbertson"
-  },
-  {
-    "word": "Cullen"
-  },
-  {
-    "word": "Davis"
-  },
-  {
-    "word": "Davis"
-  },
-  {
-    "word": "D"
-  },
-  {
-    "word": "De"
-  },
-  {
-    "word": "DelaCuesta"
-  },
-  {
-    "word": "Delfosse"
-  },
-  {
-    "word": "Dell"
-  },
-  {
-    "word": "Diggs"
-  },
-  {
-    "word": "Donohue"
-  },
-  {
-    "word": "Du"
-  },
-  {
-    "word": "Dubin"
-  },
-  {
-    "word": "Duong"
-  },
-  {
-    "word": "Ero"
-  },
-  {
-    "word": "Field"
-  },
-  {
-    "word": "Forbes"
-  },
-  {
-    "word": "Foreman"
-  },
-  {
-    "word": "Forgash"
-  },
-  {
-    "word": "Frank"
-  },
-  {
-    "word": "Gabor"
-  },
-  {
-    "word": "Gabriel"
-  },
-  {
-    "word": "Galanos"
-  },
-  {
-    "word": "Gardziel"
-  },
-  {
-    "word": "Gendive"
-  },
-  {
-    "word": "Ghodsinia"
-  },
-  {
-    "word": "Gilbert"
-  },
-  {
-    "word": "Glazer"
-  },
-  {
-    "word": "Glotfelty"
-  },
-  {
-    "word": "Glover"
-  },
-  {
-    "word": "GrayMendes"
-  },
-  {
-    "word": "Grzelkowski"
-  },
-  {
-    "word": "Hamblin"
-  },
-  {
-    "word": "Hannum"
-  },
-  {
-    "word": "Hanson"
-  },
-  {
-    "word": "Harris"
-  },
-  {
-    "word": "Hennig"
-  },
-  {
-    "word": "Henry"
-  },
-  {
-    "word": "Hernandez"
-  },
-  {
-    "word": "Hodges"
-  },
-  {
-    "word": "Holman"
-  },
-  {
-    "word": "Hurowitz"
-  },
-  {
-    "word": "James"
-  },
-  {
-    "word": "Jones"
-  },
-  {
-    "word": "Jones"
-  },
-  {
-    "word": "Kauffman"
-  },
-  {
-    "word": "Kemp"
-  },
-  {
-    "word": "Kennedy"
-  },
-  {
-    "word": "Ketchem"
-  },
-  {
-    "word": "Kim"
-  },
-  {
-    "word": "Klein"
-  },
-  {
-    "word": "Kobren"
-  },
-  {
-    "word": "Kochman"
-  },
-  {
-    "word": "Kosatka"
-  },
-  {
-    "word": "Kosek"
-  },
-  {
-    "word": "Kropf"
-  },
-  {
-    "word": "Kyung"
-  },
-  {
-    "word": "Lafever"
-  },
-  {
-    "word": "Laffey"
-  },
-  {
-    "word": "Lampazzi"
-  },
-  {
-    "word": "Larson"
-  },
-  {
-    "word": "Latham"
-  },
-  {
-    "word": "Lauducci"
-  },
-  {
-    "word": "Laursen"
-  },
-  {
-    "word": "LebrykChao"
-  },
-  {
-    "word": "Lee"
-  },
-  {
-    "word": "Lee"
-  },
-  {
-    "word": "Lee"
-  },
-  {
-    "word": "Levine"
-  },
-  {
-    "word": "Lewis"
-  },
-  {
-    "word": "Lewis"
-  },
-  {
-    "word": "<t"
-  },
-  {
-    "word": ""
-  },
-  {
-    "word": "Lister"
-  },
-  {
-    "word": "Liu"
-  },
-  {
-    "word": "Locklear"
-  },
-  {
-    "word": "Loo"
-  },
-  {
-    "word": "Love"
-  },
-  {
-    "word": "Lowery"
-  },
-  {
-    "word": "Luxenberg"
-  },
-  {
-    "word": "Mateo"
-  },
-  {
-    "word": "McAleer"
-  },
-  {
-    "word": "McConnaughey"
-  },
-  {
-    "word": "McCormick"
-  },
-  {
-    "word": "McNichol"
-  },
-  {
-    "word": "Miller"
-  },
-  {
-    "word": "Monteverde"
-  },
-  {
-    "word": "Moore"
-  },
-  {
-    "word": "Morasca"
-  },
-  {
-    "word": "Muir"
-  },
-  {
-    "word": "Murphy"
-  },
-  {
-    "word": "Myers"
-  },
-  {
-    "word": "Obeng"
-  },
-  {
-    "word": "Orser"
-  },
-  {
-    "word": "Osborne"
-  },
-  {
-    "word": "Oszko"
-  },
-  {
-    "word": "Otani"
-  },
-  {
-    "word": "Palmer"
-  },
-  {
-    "word": "Piccione"
-  },
-  {
-    "word": "Plescow"
-  },
-  {
-    "word": "Pollet"
-  },
-  {
-    "word": "Potoker"
-  },
-  {
-    "word": "Pou"
-  },
-  {
-    "word": "Powell"
-  },
-  {
-    "word": "Priddy"
-  },
-  {
-    "word": "Raya"
-  },
-  {
-    "word": "Razzino"
-  },
-  {
-    "word": "Reid"
-  },
-  {
-    "word": "Rhee"
-  },
-  {
-    "word": "Romeo"
-  },
-  {
-    "word": "Rose"
-  },
-  {
-    "word": "Rosenblum"
-  },
-  {
-    "word": "Rudwick"
-  },
-  {
-    "word": "Sacks"
-  },
-  {
-    "word": "Sandstrom"
-  },
-  {
-    "word": "Schgallis"
-  },
-  {
-    "word": "Schmitt"
-  },
-  {
-    "word": "Scholla"
-  },
-  {
-    "word": "Scott"
-  },
-  {
-    "word": "Seavey"
-  },
-  {
-    "word": "Sheptyck"
-  },
-  {
-    "word": "Smith"
-  },
-  {
-    "word": "Smith"
-  },
-  {
-    "word": "Smith"
-  },
-  {
-    "word": "Sneed"
-  },
-  {
-    "word": "Sondel"
-  },
-  {
-    "word": "Spoden"
-  },
-  {
-    "word": "Stickler"
-  },
-  {
-    "word": "Struck"
-  },
-  {
-    "word": "Stueben"
-  },
-  {
-    "word": "Taylor"
-  },
-  {
-    "word": "Tecuci"
-  },
-  {
-    "word": "Tipton"
-  },
-  {
-    "word": "Torbert"
-  },
-  {
-    "word": "Tran"
-  },
-  {
-    "word": "Va"
-  },
-  {
-    "word": "Walker"
-  },
-  {
-    "word": "Ware"
-  },
-  {
-    "word": "Waters"
-  },
-  {
-    "word": "Webb"
-  },
-  {
-    "word": "Weber"
-  },
-  {
-    "word": "West"
-  },
-  {
-    "word": "Wickliff"
-  },
-  {
-    "word": "Williams"
-  },
-  {
-    "word": "Wong"
-  },
-  {
-    "word": "Wood"
-  },
-  {
-    "word": "Woodwell"
-  },
-  {
-    "word": "Wu"
-  },
-  {
-    "word": "Xu"
-  },
-  {
-    "word": "Yi"
-  },
-  {
-    "word": "Young"
-  },
-  {
-    "word": "Yuan"
-  },
-  {
-    "word": "Zack"
-  }
-]
+        {word: "Acio" },
+        {word: "Auerbach" },
+        {word: "Bailey" },
+        {word: "Behling" },
+        {word: "Bell" },
+        {word: "Billington" },
+        {word: "Bourjaily" },
+        {word: "Brown" },
+        {word: "Burch" },
+        {word: "Burden" },
+        {word: "Zupancic" },
+        {word: "Burke" },
+        {word: "Burnett" },
+        {word: "Campbell" },
+        {word: "Carey" },
+        {word: "Chhabra" },
+        {word: "Cobb" },
+        {word: "Coffey" },
+        {word: "Conklin" },
+        {word: "Culbertson" },
+        {word: "Cullen" },
+        {word: "Davis" },
+        {word: "DelaCuesta" },
+        {word: "Delfosse" },
+        {word: "Dell" },
+        {word: "Ero" },
+        {word: "Field" },
+        {word: "Forbes" },
+        {word: "Foreman" },
+        {word: "Forgash" },
+        {word: "Frank" },
+        {word: "Gabor" },
+        {word: "Gabriel" },
+        {word: "Galanos" },
+        {word: "Gardziel" },
+        {word: "Gendive" },
+        {word: "Gilbert" },
+        {word: "Glotfelty" },
+        {word: "Glover" },
+        {word: "Grzelkowski" },
+        {word: "Hannum" },
+        {word: "Harris" },
+        {word: "Hennig" },
+        {word: "Henry" },
+        {word: "Holman" },
+        {word: "Hurowitz" },
+        {word: "James" },
+        {word: "Jones" },
+        {word: "Kauffman" },
+        {word: "Kemp" },
+        {word: "Kennedy" },
+        {word: "Kim" },
+        {word: "Klein" },
+        {word: "Kochman" },
+        {word: "Kosatka" },
+        {word: "Kosek" },
+        {word: "Lafever" },
+        {word: "Laffey" },
+        {word: "Lampazzi" },
+        {word: "Larson" },
+        {word: "Latham" },
+        {word: "Lewis" },
+        {word: "Lister" },
+        {word: "Liu" },
+        {word: "Locklear" },
+        {word: "Lowery" },
+        {word: "Luxenberg" },
+        {word: "Mateo" },
+        {word: "McAleer" },
+        {word: "McConnaughey" },
+        {word: "McCormick" },
+        {word: "McNichol" },
+        {word: "Miller" },
+        {word: "Monteverde" },
+        {word: "Moore" },
+        {word: "Muir" },
+        {word: "Murphy" },
+        {word: "Myers" },
+        {word: "Obeng" },
+        {word: "Orser" },
+        {word: "Osborne" },
+        {word: "Oszko" },
+        {word: "Otani" },
+        {word: "Piccione" },
+        {word: "Pollet" },
+        {word: "Potoker" },
+        {word: "Pou" },
+        {word: "Razzino" },
+        {word: "Rhee" },
+        {word: "Romeo" },
+        {word: "Rose" },
+        {word: "Rosenblum" },
+        {word: "Rudwick" },
+        {word: "Sacks" },
+        {word: "Sandstrom" },
+        {word: "Schgallis" },
+        {word: "Schmitt" },
+        {word: "Scholla" },
+        {word: "Scott" },
+        {word: "Seavey" },
+        {word: "Sheptyck" },
+        {word: "Smith" },
+        {word: "Spoden" },
+        {word: "Stickler" },
+        {word: "Struck" },
+        {word: "Stueben" },
+        {word: "Taylor" },
+        {word: "Torbert" },
+        {word: "Walker" },
+        {word: "Ware" },
+        {word: "Waters" },
+        {word: "Webb" },
+        {word: "Weber" },
+        {word: "West" },
+        {word: "Wickliff" },
+        {word: "Williams" },
+        {word: "Wong" },
+        {word: "Wood" },
+        {word: "Woodwell" },
+        {word: "Yi" },
+        {word: "Young" },
+        {word: "Zack" }
+    ]
 });
 
 teachers.initialize();

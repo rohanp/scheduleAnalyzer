@@ -104,7 +104,7 @@ Summer World History
 CHUM
 Global Studies
 Senior Sem
-Adv. Microprocessor Design
+Adv Microprocessor Design
 Analog Electronics
 Digital Electronics
 Robotics 1
