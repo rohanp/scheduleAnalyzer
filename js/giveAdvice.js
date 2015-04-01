@@ -1,33 +1,28 @@
-var data
-var firebaseData = new Firebase("https://scheduleanalyzer.firebaseio.com/data");
-firebaseData.once('value', function(snap) {
-    data = snap.val();
-});
-
-
 $('#submitAdvice').click( 
     function(){
         className = $('#className').val().toLowerCase();
         teacher = $('#teacherName').val().toLowerCase();
         hours = parseFloat($('#hours').val());
         difficulty = parseFloat($('#difficulty').val());
-        enter(className, teacher, hours, difficulty);
+        if(className.length>0 && teacherName.length>0)
+            enter(className, teacher, hours, difficulty);
 
     }
 );
 
 function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
-    if(data[c][t]){
-        var datact
-        var firebase = new Firebase("https://scheduleanalyzer.firebaseio.com/data/"+c.replace(' ', '%20')+'/' + t)
-        firebase.once('value', function(snap) {
+    var datact //data[class][teacher]
+    var url = "https://scheduleanalyzer.firebaseio.com/data/"+c.replace(' ', '%20')+'/' + t
+    var firebase = new Firebase(url)
+    
+    firebase.once('value', function(snap) {
+        if(snap.exists()){
             datact = snap.val();
             var num = datact['numEntries']
-
             datact['hours'] = (datact['hours']*num + hours)/(num + 1)
             datact['difficulty'] = parseFloat((datact['difficulty']*num + difficulty)/(num + 1))
-            datact['hoursVariance'] = (parseInt(datact['hoursVariance'])*num + Math.pow(hours - datact['hours'], 2))/(num + 1)
-            datact['difficultyVariance'] = (parseInt(datact['difficultyVariance'])*num + Math.pow(difficulty - datact['difficulty'], 2))/(num + 1)
+            datact['hoursVariance'] = (parseFloat(datact['hoursVariance'])*num + Math.pow(hours - datact['hours'], 2))/(num + 1)
+            datact['difficultyVariance'] = (parseFloat(datact['difficultyVariance'])*num + Math.pow(difficulty - datact['difficulty'], 2))/(num + 1)
             datact['numEntries'] += 1
             console.log("here")
             firebase.update(datact, function(o){
@@ -45,11 +40,14 @@ function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
                     $('#difficulty').val('');
                 }
             })
-        });   
-    }  else {
-        $('#rightContainer').append("<div class='pure-g'> <div class='pure-u-4-5'> <center> <span class='message'> Class/Teacher not found. Be sure to use the autocomplete suggestions. </span> </center></div> <div class='pure-u-1-5'> </div> </div> ");
-    }
-}
+        } else {
+                
+                $('#rightContainer').append("<div class='pure-g'> <div class='pure-u-4-5'> <center> <span class='message'> Class/Teacher not found. Be sure to use the autocomplete suggestions. </span> </center></div> <div class='pure-u-1-5'> </div> </div> ");
+        
+        }
+    });   
+}  
+
 
 function addSuccess(){
             $('#rightContainer').append("<div class='pure-g'> <div class='pure-u-4-5'> <center> <span class='message'> Thank you! Your response has been recorded </span> </center></div> <div class='pure-u-1-5'> </div> </div> ");

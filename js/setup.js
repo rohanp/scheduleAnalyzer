@@ -26,7 +26,7 @@ var $slider = $("#hourSlider");
 if ($slider.length > 0) {
   $slider.slider({
     min: 0,
-    max: 6,
+    max: 10,
     value: 1,
     step: 0.5,
     orientation: "horizontal",
@@ -61,15 +61,26 @@ $("#difficulty").change(function () {
     $("#difficultySlider").slider("value", parseInt(value));
 });
 
+$('#classesContainer').append("\
+        <div class='pure-g'>\
+            <div class='grid pure-u-1-5'> </div>\
+             <div class='grid pure-u-2-5'>\
+                <input type='text' placeholder='English 11' class='className form-control blue blueChildren'/>\
+            </div>\
+            <div class='grid pure-u-2-5'>\
+                 <input type='text' placeholder='Miller' class='teacherName form-control blue blueChildren'/>\
+            </div>\
+        </div>");
+
 for(var i=0; i<6; i++){
     $('#classesContainer').append("\
             <div class='pure-g'>\
                 <div class='grid pure-u-1-5'> </div>\
                  <div class='grid pure-u-2-5'>\
-                    <input type='text' placeholder='' class='className form-control blue'/>\
+                    <input type='text' placeholder='' class='className form-control blue blueChildren'/>\
                 </div>\
                 <div class='grid pure-u-2-5'>\
-                     <input type='text' placeholder='' class='teacherName form-control blue'/>\
+                     <input type='text' placeholder='' class='teacherName form-control blue blueChildren'/>\
                 </div>\
             </div>");
 }

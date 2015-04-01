@@ -1,8 +1,10 @@
 <html>
 	<head>
+        <meta charset="utf-8">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/flat-ui/flat-ui.css" rel="stylesheet">
 		<link href="css/pure.min.css" rel="stylesheet">
+        <link href="css/bulletstyle.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<title> Schedule </title>
 	</head>
@@ -12,7 +14,7 @@
         <h2> Schedule Analyzer </h2>
         
         <div id="leftContainer">
-            <div class="pure-g">
+            <div class="title pure-g">
                 <div class="pure-u-1-5"></div>
                 <div class="pure-u-4-5">
                     <h4> Get Advice </h4>
@@ -20,15 +22,13 @@
             </div>
             
             <div id="classesContainer">
-                <div class="pure-g">
+                <div class="pure-g" style="height:59px">
                     <div class="grid pure-u-1-5"> </div>
                      <div class="grid pure-u-2-5">
                         <h6> Class </h6>
-                        <input type="text" placeholder="eg. Multivar" class="className form-control blue blueChildren" />
                     </div>
                     <div class="grid pure-u-2-5">
                         <h6> Teacher </h6>
-                         <input type="text" placeholder="eg. Osborne" class="teacherName form-control blue blueChildren" />
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 <div class="grid pure-u-1-5"></div>
                 <div  class="grid pure-u-4-5">
                     <center>
-                        <button class="btn btn-blue btn-hg">
+                        <button id="getAdvice" class="btn btn-blue btn-hg">
                             Submit
                         </button> 
                     </center>                
@@ -73,7 +73,7 @@
             <div class="pure-g">
                 <div class="grid pure-u-3-5">
                     <span>
-                        How many hours of work per class?
+                        How many hours of work per week?
                     </span>
                     <div id="hourSlider">
                     </div>
@@ -115,15 +115,18 @@
                 <div class="grid pure-u-1-5"></div>
             </div>
         </div>
-
-        
         
         <script src="js/jquery.min.js"> </script>
         <script src="js/flat-ui.js"> </script>
-        <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
         <script src="js/setup.js"> </script>
+        <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="js/bullet.js"></script>
         <script src="js/autocomplete.js"></script>
-        <script src="js/script.js"> </script>
+        <script src="js/giveAdvice.js"> </script>
+        <script src="js/getAdvice.js"> </script>
+
+
 
 	</body>
 
