@@ -32,7 +32,11 @@ $("#getAdvice").click( function(){
 
     $('h4').animate({
         left: window.innerWidth/5 + 'px'
-    }, 300 )
+    }, 500, 'swing' )
+    
+    $('#getAdvice').animate({
+        left: window.innerWidth/5 + 'px'
+    }, 500, 'swing' )
     
     for(var i=1; i<=8;i++){
         $('#rightContainer').append(
@@ -111,7 +115,7 @@ function writeDatact(datact, i){
         var diff =  Math.round(datact['difficulty']*10)/10
         var hsd = Math.round( Math.sqrt(datact["hoursVariance"]/7)*10 )/10
         var dsd = Math.round( Math.sqrt(datact["difficultyVariance"])*10 )/10
-        if(datact["numEntries"] < 2){
+        if(datact["numEntries"] < 1){
             $('#hours'+i).html( "no data" );
             $('#difficulty'+i).html( "no data" );
         } else {
