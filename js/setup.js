@@ -68,9 +68,10 @@ $('#classesContainer').append("\
                 <input type='text' placeholder='English 11' class='className form-control blue blueChildren'/>\
             </div>\
             <div class='grid pure-u-2-5'>\
-                 <input type='text' placeholder='Miller' class='teacherName form-control blue blueChildren'/>\
+                 <input type='text' placeholder='Miller (or leave blank)' class='teacherName form-control blue blueChildren'/>\
             </div>\
         </div>");
+
 
 for(var i=0; i<6; i++){
     $('#classesContainer').append("\

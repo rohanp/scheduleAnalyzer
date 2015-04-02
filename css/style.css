@@ -4,6 +4,7 @@ h2{
 
 h4{
     text-align: center;
+    position: relative;
 }
 
 #rightContainer h4{
@@ -41,6 +42,7 @@ button{
 }
 
 #rightContainer{
+    position: relative;
     height: auto;
     width: 500px;
     float: right;
