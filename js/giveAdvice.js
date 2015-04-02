@@ -1,11 +1,14 @@
 $('#submitAdvice').click( 
     function(){
         className = $('#className').val().toLowerCase();
-        teacher = $('#teacherName').val().toLowerCase();
+        teacherName = $('#teacherName').val().toLowerCase();
         hours = parseFloat($('#hours').val());
         difficulty = parseFloat($('#difficulty').val());
-        if(className.length>0 && teacherName.length>0)
-            enter(className, teacher, hours, difficulty);
+        console.log("clicked");
+        if(className.length>0 && teacherName.length>0){
+            console.log(className);
+            enter(className, teacherName, hours, difficulty);
+        }
 
     }
 );
@@ -14,7 +17,7 @@ function enter(c, t, hours, difficulty){ //class, teacher, hours, difficulity
     var datact //data[class][teacher]
     var url = "https://scheduleanalyzer.firebaseio.com/data/"+c.replace(' ', '%20')+'/' + t
     var firebase = new Firebase(url)
-    
+    console.log("entering");
     firebase.once('value', function(snap) {
         if(snap.exists()){
             datact = snap.val();
