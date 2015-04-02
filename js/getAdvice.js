@@ -1,4 +1,7 @@
+var total;
+
 $("#getAdvice").click( function(){
+    total = 0
     $('#rightContainer')
     .animate({
         left: '+=800px'
@@ -18,7 +21,7 @@ $("#getAdvice").click( function(){
     </div>\
     <div class='pure-g' style='height:59px'>\
          <div class='grid pure-u-1-5'>\
-            <h6> Hours/Day </h6>\
+            <h6> Hours/Class </h6>\
         </div>\
         <div class='grid pure-u-1-5'>\
             <h6> Class Avg </h6>\
@@ -47,6 +50,8 @@ $("#getAdvice").click( function(){
                 <div class='grid pure-u-1-5'>\
                 </div>\
             </div>");
+        if(i==5 || i==8)
+            $('#rightContainer').append('<hr>')
     }                                              
     
     $a = $('#classesContainer .pure-g')
@@ -69,8 +74,12 @@ $("#getAdvice").click( function(){
     $('#rightContainer')
         .animate({
             left: '-=800px'
-        }, 500)
-
+        }, 500,
+        function(){
+            
+        })
+    
+    
 })
 
 function writeDataNoTeacher(firebase, i){
@@ -115,6 +124,9 @@ function writeDatact(datact, i){
         var diff =  Math.round(datact['difficulty']*10)/10
         var hsd = Math.round( Math.sqrt(datact["hoursVariance"]/7)*10 )/10
         var dsd = Math.round( Math.sqrt(datact["difficultyVariance"])*10 )/10
+        total += hours
+        totalSD += hsd
+        
         if(datact["numEntries"] < 1){
             $('#hours'+i).html( "no data" );
             $('#difficulty'+i).html( "no data" );
