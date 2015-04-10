@@ -45,7 +45,7 @@ $("#hours").change(function () {
 var $slider = $("#difficultySlider");
 if ($slider.length > 0) {
   $slider.slider({
-    min: 70,
+    min: 80,
     max: 100,
     value: 88,
     orientation: "horizontal",

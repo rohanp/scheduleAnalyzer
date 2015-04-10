@@ -2,8 +2,13 @@ $('#submitAdvice').click(
     function(){
         className = $('#className').val().toLowerCase();
         teacherName = $('#teacherName').val().toLowerCase();
-        hours = parseFloat($('#hours').val());
-        difficulty = parseFloat($('#difficulty').val());
+        
+        hours = $('#hourSlider').slider('option', 'value');
+        $('#hours').val(hours);
+        
+        difficulty = $('#difficultySlider').slider("option", "value")
+        $('#difficulty').val(difficulty);
+        
         console.log("clicked");
         if(className.length>0 && teacherName.length>0){
             console.log(className);
