@@ -108,11 +108,15 @@ function calcDatact(datac){
     var datact = {"hours":0, "hoursVariance":0, "difficulty":0, "difficultyVariance":0, "numEntries":0}
     Object.keys(datac).forEach( function(t){
             var num = datact['numEntries']
-            datact['hours'] = (datact['hours']*num + datac[t]['hours'])/(num + 1)
-            datact['difficulty'] = parseFloat((datact['difficulty']*num + datac[t]['difficulty'])/(num + 1))
-            datact['hoursVariance'] = (parseFloat(datact['hoursVariance'])*num + Math.pow(datac[t]['hours'] - datact['hours'], 2))/(num + 1)
-            datact['difficultyVariance'] = (parseFloat(datact['difficultyVariance'])*num + Math.pow(datac[t]['difficulty'] - datact['difficulty'], 2))/(num + 1)
-            datact['numEntries'] += 1
+            if(datac[t]['numEntries'] != 0){
+                console.log(t)
+                console.log(datac[t])
+                datact['hours'] = (datact['hours']*num + datac[t]['hours'])/(num + 1)
+                datact['difficulty'] = parseFloat((datact['difficulty']*num + datac[t]['difficulty'])/(num + 1))
+                datact['hoursVariance'] = (parseFloat(datact['hoursVariance'])*num + Math.pow(datac[t]['hours'] - datact['hours'], 2))/(num + 1)
+                datact['difficultyVariance'] = (parseFloat(datact['difficultyVariance'])*num + Math.pow(datac[t]['difficulty'] - datact['difficulty'], 2))/(num + 1)
+                datact['numEntries'] += 1
+            } 
         
     })
     return datact
@@ -120,12 +124,10 @@ function calcDatact(datac){
     
 function writeDatact(datact, i){
         console.log(datact);
-        var hours = Math.round(datact['hours']/7*10)/10
+        var hours = Math.round(datact['hours']*10)/10
         var diff =  Math.round(datact['difficulty']*10)/10
-        var hsd = Math.round( Math.sqrt(datact["hoursVariance"]/7)*10 )/10
+        var hsd = Math.round( Math.sqrt(datact["hoursVariance"])*10 )/10
         var dsd = Math.round( Math.sqrt(datact["difficultyVariance"])*10 )/10
-        total += hours
-        totalSD += hsd
         
         if(datact["numEntries"] < 1){
             $('#hours'+i).html( "no data" );
