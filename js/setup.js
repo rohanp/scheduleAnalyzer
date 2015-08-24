@@ -2,6 +2,11 @@ $('#leftContainer').css('width', parseInt(window.innerWidth/2)-50);
 $('#rightContainer').css('width', parseInt(window.innerWidth/2)-50);
 $('#leftHalf').css('width', parseInt(window.outerWidth/2));
 
+console.log("heyo")
+$('#home').click(
+    function(){
+        location.reload()
+    })
 
 $.fn.addSliderSegments = function (amount, orientation) {
   return this.each(function () {

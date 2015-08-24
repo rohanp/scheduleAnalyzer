@@ -4,6 +4,10 @@ firebaseData.once('value', function(snap) {
     data = snap.val();
 });
 
+$('#home').click(
+    function(){
+        reload()
+    })
 
 $('#submitAdvice').click( 
     function(){
