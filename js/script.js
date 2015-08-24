@@ -6,7 +6,7 @@ firebaseData.once('value', function(snap) {
 
 $('#home').click(
     function(){
-        reload()
+        location.reload()
     })
 
 $('#submitAdvice').click( 

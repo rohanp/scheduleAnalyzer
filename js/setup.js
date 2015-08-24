@@ -5,7 +5,9 @@ $('#leftHalf').css('width', parseInt(window.outerWidth/2));
 console.log("heyo")
 $('#home').click(
     function(){
-        location.reload()
+        //location.reload();
+        location.reload( true ); 
+        //window.location = self.location;
     })
 
 $.fn.addSliderSegments = function (amount, orientation) {
