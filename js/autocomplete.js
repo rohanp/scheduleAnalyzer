@@ -321,5 +321,3 @@ $('.teacherName').typeahead(null, {
 
 
 $('.blueChildren').parent().children('span').addClass('blue');
-
-
